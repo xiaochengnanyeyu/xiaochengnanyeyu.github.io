@@ -229,6 +229,129 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/24/testPost/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/24/testPost/" itemprop="url">spring JdbcTemplate 使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-24T16:41:54+08:00">
+                2018-10-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>spring JdbcTemplate 使用</p>
+<p>什么是Template?<br>　　Spring提供的一种操作数据库的技术，是对Jdbc的封装。语法非常接近DBUtils.</p>
+<p>　　JdbcTemplate可以直接操作数据库，加快效率，jdbcTemplate也可以为声明式事务准备</p>
+<p>为什么用JdbcTemplate进行开发？　　<br>　　Spring对数据库的操作在jdbc上面做了深层次的封装，使用spring的注入功能，可以把DataSource注册到JdbcTemplate之中。<br>　　Spring提供的JdbcTemplate对jdbc做了封装，大大简化了数据库的操作。找到Spring 　　JdbcTemplate源码，可以看到如下方法：<br>　　Connection con = DataSourceUtils.getConnection(getDataSource());<br>　　如果直接使用JDBC的话，需要我们加载数据库驱动、创建连接、释放连接、异常处理等一系列的动作；繁琐且代码看起来不直观。<br>　　此外，Spring提供的JdbcTempate能直接数据对象映射成实体类，不再需要获取　　ResultSet去获取值/赋值等操作，提高开发效率；<br>　　如下：return (User) jdbcTemplate.queryForObject(“select * from tb_test1 where id = 100”, User.class)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/24/hello-world/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -390,7 +513,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
